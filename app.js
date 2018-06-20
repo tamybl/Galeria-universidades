@@ -6,18 +6,18 @@ const container = document.getElementById("container");
 document.addEventListener('DOMContentLoaded', listeners);
 
 function listeners(){
-  btn.addEventListener('click', galery); 
+  btn.addEventListener('click', gallery); 
 }
 
-function galery(){ 
+function gallery(){ 
   
   var num =1;
 
   let html = `<div class="modal-container">
                 <div class="st-card"> 
                   <div class="st-card-section">
-                    <button id="cerrar" class="cerrar"></button>
-                    <input type="button" value="<<" id="forward"> 
+                    <button id="cerrar" class="cerrar">x</button>
+                    <input type="button" value=">>" id="forward"> 
                     <img src="foto1.jpg" id="foto">
                     <input type="button" value="<<" id="back"> 
                   </div>
@@ -32,32 +32,24 @@ function galery(){
  
   btnForward.addEventListener('click', function(){
     	num++;
-    	if(num>5)
-    		num=1;
-    		var foto=document.getElementById("foto");
-    		foto.src="foto" + num + ".jpg";  
-        imagen.parentElement.style.height = imagen.height + 'px';
-        imagen.parentElement.style.width = imagen.width  + 'px';
-  });
+    	if(num>5) { num=1; };
+    		imagen.src="foto" + num + ".jpg";  
+
+        
+  
+  } );
 
   btnBack.addEventListener('click', function(){
     	num--;
     	if(num<1)
     		num=5;
-    		var foto=document.getElementById("foto");
     		foto.src="foto" + num + ".jpg";
-        imagen.parentElement.style.height = imagen.height + 'px';
-        imagen.parentElement.style.width = imagen.width  + 'px';
+
   });
 
   cerrar.addEventListener('click', function(){
        container.innerHTML = "";
   });
- 
-  imagen.parentElement.style.height = imagen.height + 'px';
-  imagen.parentElement.style.width = imagen.width  + 'px';
 
-  console.log(  imagen.height );
-  console.log(  imagen.width  );
- 
 };
+
