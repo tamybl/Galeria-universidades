@@ -15,8 +15,8 @@ function gallery(){
 
   let html = `<div class="modal-container">
                 <div class="st-card"> 
+                  <button id="cerrar" class="cerrar">x</button>
                   <div class="st-card-section">
-                    <button id="cerrar" class="cerrar">x</button>
                     <input type="button" value=">>" id="forward"> 
                     <img src="foto1.jpg" id="foto">
                     <input type="button" value="<<" id="back"> 

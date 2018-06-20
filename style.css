@@ -9,10 +9,17 @@ body {
     background: rgba(0,0,0,.6);
     position: fixed; 
     display:table; 
+    z-index: 100;
+    /* Tapa toda la pantalla */
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 img {
 	max-height: 80vh;
+    max-width: 90%;
     border: solid 10px #fff;
     border-radius: 4px;
     display: block;
